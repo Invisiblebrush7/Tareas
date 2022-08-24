@@ -1,0 +1,29 @@
+// Responsive Grid
+$layout-breakpoint-sm: 0px;
+$layout-breakpoint-md: 768px;
+$layout-breakpoint-lg: 992px;
+$layout-breakpoint-xl: 1200px;
+
+$gap: 1rem;
+$cols: 12;
+
+@mixin sm() {
+	@media screen and (min-width: $layout-breakpoint-sm) {
+		@content;
+	}
+}
+@mixin md() {
+	@media screen and (min-width: $layout-breakpoint-md) {
+		@content;
+	}
+}
+@mixin lg() {
+	@media screen and (min-width: $layout-breakpoint-lg) {
+		@content;
+	}
+}
+@mixin xl() {
+	@media screen and (min-width: $layout-breakpoint-xl) {
+		@content;
+	}
+}

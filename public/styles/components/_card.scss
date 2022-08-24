@@ -1,0 +1,17 @@
+.card {
+	min-height: 10rem;
+	max-height: 30vh;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+	transition: 0.2s;
+
+	&:hover {
+		transform: translateY(-0.5rem);
+	}
+	@extend .basic-spacing;
+	&-title {
+		font-weight: 700;
+	}
+	&-description {
+		margin-top: 1rem;
+	}
+}

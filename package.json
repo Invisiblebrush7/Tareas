@@ -1,0 +1,17 @@
+{
+	"name": "tarea_1_responsive_grid_layout",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"style:dev": "sass public/styles/index.scss:src/css/style.css --no-source-map --watch",
+		"style:production": "sass public/styles:src/css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"sass": "^1.54.5"
+	}
+}

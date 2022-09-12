@@ -123,6 +123,15 @@ section.container .news-grid .card {
   background-color: white;
   border-radius: 15px;
   margin: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+section.container .news-grid .card:hover {
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 section.container .news-grid .card .news-image {

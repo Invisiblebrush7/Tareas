@@ -21,10 +21,10 @@
 	<div class='news-grid'>
 		{{#each articles}}
 			<div class='card'>
-				<img class='news-image' src={{this.urlToImage}} alt={{this.title}} />
+				<img class='news-image' src='{{this.urlToImage}}' alt='{{this.title}}' loading='lazy' />
 				<h3>{{this.title}}</h3>
 				<p>{{this.description}}</p>
-				<a href={{this.url}}>See more</a>
+				<a href={{this.url}} target='_blank'>See more</a>
 			</div>
 		{{/each}}
 	</div>

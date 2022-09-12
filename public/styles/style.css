@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #039ec1;
+}
+
+body {
+  background-color: #ededed;
+}
+
+.navbar {
+  padding: 0 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #24252a;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.navbar a:visited {
+  color: white;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.navbar .left-side h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.navbar .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .right-side form {
+  padding-left: 1.5rem;
+}
+
+.navbar .right-side form button {
+  padding: 0.5rem 2.25rem;
+  background-color: #0088a5;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  border: 2px solid transparent;
+}
+
+.navbar .right-side form button:hover {
+  border: 2px solid #07acac;
+}
+
+.navbar .right-side form input {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  border: none;
+  border: 2px solid #0088a5;
+  border-radius: 15px;
+  color: white;
+}
+
+.navbar .right-side form input:hover, .navbar .right-side form input:focus {
+  border: 2px solid #07acac;
+}
+
+.navbar .right-side form input:focus-visible {
+  outline: none;
+}
+
+section.container {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+section.container h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+section.container .news-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+section.container .news-grid .card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 15px;
+  margin: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

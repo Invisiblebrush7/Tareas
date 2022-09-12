@@ -8,7 +8,7 @@
 	<div class='right-side'>
 		<a href='#'>Top Headlines</a>
 		<form action='/search' method='get'>
-			<input type='text' placeholder='Search for news...' id='query-input' name='q' />
+			<input type='text' placeholder='Search for news...' id='query-input' name='q' required />
 			<button type='submit'>Search</button>
 		</form>
 	</div>
@@ -19,21 +19,13 @@
 	<h2>Find the best news from all around the world</h2>
 
 	<div class='news-grid'>
-		<div class='card'>
-			<h3>This is my news</h3>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, est.</p>
-			<a href='#'>See more</a>
-		</div>
-		<div class='card'>
-			<h3>This is my news</h3>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, est.</p>
-			<a href='#'>See more</a>
-		</div>
-		<div class='card'>
-			<h3>This is my news</h3>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae, est.</p>
-			<a href='#'>See more</a>
-		</div>
+		{{#each articles}}
+			<div class='card'>
+				<h3>{{this.title}}</h3>
+				<p>{{this.description}}</p>
+				<a href={{this.url}}>See more</a>
+			</div>
+		{{/each}}
 	</div>
 
 </section>

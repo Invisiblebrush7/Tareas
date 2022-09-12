@@ -21,6 +21,7 @@
 	<div class='news-grid'>
 		{{#each articles}}
 			<div class='card'>
+				<img class='news-image' src={{this.urlToImage}} alt={{this.title}} />
 				<h3>{{this.title}}</h3>
 				<p>{{this.description}}</p>
 				<a href={{this.url}}>See more</a>

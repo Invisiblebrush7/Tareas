@@ -110,3 +110,35 @@ section.container {
 		}
 	}
 }
+
+@media (max-width: 1000px) {
+	section.container .news-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 775px) {
+	section.container .news-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		padding: 2rem;
+		.card {
+			padding: 1rem;
+			.card-title {
+				margin-bottom: 1rem;
+			}
+			.news-image {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+@media (max-width: 935px) {
+	.navbar {
+		padding: 1rem;
+		justify-content: center;
+		.left-side {
+			display: none;
+		}
+	}
+}

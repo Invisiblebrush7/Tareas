@@ -31,10 +31,8 @@ app.get('/', getTopHeadlines, (req, res) => {
 
 app.get('/search', getNewsWithQuery, (req, res) => {
 	if (req.query['q'] === '') {
-		console.log('No query');
 		res.redirect('/');
 	} else {
-		console.log('Query found');
 		res.render('search', { articles: req.params.articles, query: req.query['q'] });
 	}
 });

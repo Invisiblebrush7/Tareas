@@ -13,9 +13,30 @@ async function getTopHeadlines(req, res, next) {
 
 	next();
 }
+// GET https://newsapi.org/v2/everything?q=bitcoin&apiKey=a485fbb1050f4a1faf3fbe99fc2c0f43
+async function getNewsWithQuery(req, res, next) {
+	const mainUrl = `https://newsapi.org/v2/everything?q=${req.query['q']}&apiKey=${process.env.API_KEY}`;
+
+	const response = await fetch(mainUrl);
+	const data = await response.json();
+	const articles = data.articles;
+	req.params.articles = articles;
+
+	next();
+}
 
 app.get('/', getTopHeadlines, (req, res) => {
 	res.render('home', { articles: req.params.articles });
+});
+
+app.get('/search', getNewsWithQuery, (req, res) => {
+	if (req.query['q'] === '') {
+		console.log('No query');
+		res.redirect('/');
+	} else {
+		console.log('Query found');
+		res.render('search', { articles: req.params.articles, query: req.query['q'] });
+	}
 });
 
 module.exports = app;

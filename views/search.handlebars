@@ -1,0 +1,32 @@
+<nav class='navbar'>
+	<div class='left-side'>
+		<img src='./imgs/logo.png' alt='Logo' width='100px' />
+		<a href='/'>
+			<h2>Today's News</h2>
+		</a>
+	</div>
+	<div class='right-side'>
+		<a href='/'>Top Headlines</a>
+		<form action='/search' method='get'>
+			<input type='text' placeholder='Search for news...' id='query-input' name='q' required />
+			<button type='submit' value='hola'>Search</button>
+		</form>
+	</div>
+</nav>
+
+<section class='container' id='news'>
+	<h1>Search News</h1>
+	<h2>This is what we found about <strong>{{query}}</strong></h2>
+
+	<div class='news-grid'>
+		{{#each articles}}
+			<div class='card'>
+				<img class='news-image' src='{{this.urlToImage}}' alt='{{this.title}}' loading='lazy' />
+				<h3>{{this.title}}</h3>
+				<p>{{this.description}}</p>
+				<a href={{this.url}} target='_blank'>See more</a>
+			</div>
+		{{/each}}
+	</div>
+
+</section>

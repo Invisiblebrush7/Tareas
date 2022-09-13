@@ -28,12 +28,22 @@ async function getNewsWithQuery(req, res, next) {
 app.get('/', getTopHeadlines, (req, res) => {
 	res.render('home', { articles: req.params.articles });
 });
+app.get('/api/news', getTopHeadlines, (req, res) => {
+	res.send(req.params.articles);
+});
 
 app.get('/search', getNewsWithQuery, (req, res) => {
 	if (req.query['q'] === '') {
 		res.redirect('/');
 	} else {
 		res.render('search', { articles: req.params.articles, query: req.query['q'] });
+	}
+});
+app.get('/api/search', getNewsWithQuery, (req, res) => {
+	if (req.query['q'] === '') {
+		res.redirect('/');
+	} else {
+		res.send(req.params.articles);
 	}
 });
 
